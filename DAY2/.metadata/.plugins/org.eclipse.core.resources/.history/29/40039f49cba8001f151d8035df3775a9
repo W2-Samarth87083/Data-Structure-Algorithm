@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class StackMain {
+	
+	public static void main(String [] args) {
+		
+		Stack s = new Stack(5);
+		
+		Scanner sc = new Scanner(System.in);
+		int choice;
+	
+		do {
+			System.out.println("1. Push\n2. Pop\n3. Peek");
+			System.out.print("Enter your choice : ");
+			choice = sc.nextInt();
+			
+		} while (choice!=0);
+		
+	}
+
+}

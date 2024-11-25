@@ -1,0 +1,46 @@
+
+public class DoublyLinear {
+	static class Node {
+		private int data;
+		private Node next, prev;
+
+		public Node(int value) {
+			data = value;
+			next = prev = null;
+		}
+	}
+
+	private Node head, tail;
+
+	public DoublyLinear() {
+		head = tail = null;
+	}
+
+	public boolean isEmpty() {
+		return head == null && tail == null;
+	}
+
+	public void forwardDisplay() {
+		System.out.print("Forwrad List :: ");
+		Node trav = head;
+		while (trav != null) {
+			System.out.print(" " + trav.data);
+			trav = trav.next;
+		}
+		System.out.println();
+	}
+
+	public void backward() {
+		System.out.print("Forwrad List :: ");
+	}
+
+	public void addFirst(int value) {
+
+	}
+
+	public void DeleteAll() {
+		head = tail = null;
+		return;
+	}
+
+}

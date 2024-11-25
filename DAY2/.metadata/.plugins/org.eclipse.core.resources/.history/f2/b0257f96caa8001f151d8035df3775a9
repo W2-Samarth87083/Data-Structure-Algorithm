@@ -1,0 +1,19 @@
+
+public class Stack {
+
+	private int arr[];
+	
+	private final int SIZE;
+	
+	private int top;
+
+	public Stack(int size) {
+		SIZE=size;
+		arr = new int [SIZE];
+		top = -1;
+	}
+	
+	
+	
+
+}

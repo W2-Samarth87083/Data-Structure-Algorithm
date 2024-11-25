@@ -1,0 +1,118 @@
+
+public class LinkedList {
+	static class Node {
+		private int data;
+		private Node next;
+
+		public Node(int value) {
+			data = value;
+			next = null;
+		}
+	}
+
+	private Node head, tail;
+	private int size;
+
+	public LinkedList() {
+		head = tail = null;
+		size = 0;
+	}
+
+	public boolean isEmpty() {
+		return head == null && tail == null;
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public void Display() {
+
+		if (head == null) {
+			return;
+		}
+
+		System.out.println("List");
+
+		Node trav = head;
+
+		do {
+			System.out.print(" " + trav.data);
+			trav = trav.next;
+		} while (trav != head);
+		System.out.println();
+
+	}
+
+	public void addFirst(int value) {
+
+		Node newnode = new Node(value);
+
+		if (head == null) {
+
+			head = tail = newnode;
+
+			tail.next = head;
+		} else {
+			newnode.next = head;
+			tail.next = newnode;
+			head = newnode;
+		}
+		size++;
+	}
+
+	public void addLast(int value) {
+		Node newnode = new Node(value);
+
+		if (head == null) {
+
+			head = tail = newnode;
+
+			tail.next = head;
+		} else {
+			newnode.next = head;
+			tail.next = newnode;
+			tail = newnode;
+		}
+		size++;
+	}
+
+	public void deleteFirst() {
+		if (head == null)
+			return;
+		else if (head == tail)
+			head = tail = null;
+
+		else {
+             tail.next = head.next;
+             head=head.next;
+		}
+		size--;
+	}
+
+	public void deleteLast() {
+		if (tail==null) {
+			return;
+		}
+		else if (head==tail) {
+			head=tail=null;
+		}
+		else {
+			//a. traverse till second last node
+			Node trav = head;
+			while(trav.next.next != head)
+				trav = trav.next;
+			//b. add first node into next of second last node
+			trav.next = head;
+			//c. move tail on second last node
+			tail = trav;
+		}
+		size--;
+
+	}
+
+	public void deleteAll() {
+		head = tail = null;
+		size = 0;
+	}
+}

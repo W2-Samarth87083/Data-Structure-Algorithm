@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class StackMain {
+	
+	public static void main(String [] args) {
+		
+		Stack s = new Stack(5);
+		
+		Scanner sc = new Scanner(System.in);
+		
+	}
+
+}

@@ -1,0 +1,69 @@
+
+public class SinglyLinearLinked {
+	static class Node {
+		int data;
+		Node next;
+
+		Node(int value) {
+			this.data = value;
+			this.next = null;
+		}
+	}
+
+	private Node head;
+	private Node tail;
+	private int size;
+
+	public SinglyLinearLinked() {
+		head = null;
+		tail = null;
+		size = 0;
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public boolean isEmpty() {
+		return head == null;
+	}
+
+	public void addFirst(int data) {
+		Node newNode = new Node(data);
+		if (isEmpty()) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			newNode.next = head;
+			head = newNode;
+		}
+		size++;
+	}
+
+	public void addLast(int data) {
+		Node newNode = new Node(data);
+		if (isEmpty()) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.next = newNode;
+			tail = newNode;
+		}
+		size++;
+	}
+
+	
+
+	public void display() {
+		if (isEmpty()) {
+			System.out.println("List is empty.");
+			return;
+		}
+		Node newnode = head;
+		while (newnode != null) {
+			System.out.print(newnode.data + " -> ");
+			newnode = newnode.next;
+		}
+		System.out.println("null");
+	}
+}

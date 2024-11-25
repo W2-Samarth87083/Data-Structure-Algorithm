@@ -1,0 +1,22 @@
+
+public class DoublyLinear {
+	static class Node{
+		private int data;
+		private Node next, prev;
+		public Node(int value) {
+			data = value;
+			next = prev = null;
+		}
+	}
+
+	private Node head, tail;
+	
+	public LinkedList() {
+		head = tail = null;
+	}
+	
+	public boolean isEmpty() {
+		return head == null && tail == null;
+	}
+	
+}

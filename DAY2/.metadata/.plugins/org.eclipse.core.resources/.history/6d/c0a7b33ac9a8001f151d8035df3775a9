@@ -1,0 +1,19 @@
+
+public class Stack {
+
+	private int arr[];
+	
+	private final int SIZE;
+	
+	private int top;
+
+	public Stack(int[] arr, int size, int top) {
+		this.arr = arr;
+		SIZE = size;
+		this.top = top;
+	}
+	
+	
+	
+
+}

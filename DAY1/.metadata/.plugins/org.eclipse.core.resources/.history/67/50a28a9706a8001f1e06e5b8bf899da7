@@ -1,0 +1,39 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Program {
+	Employee e = new Employee();
+	
+	public static Employee EmployeeId(int id, String name) {
+		
+		if(e.getId())
+		
+		
+	}
+	
+	public static void main (String [] args) {
+		
+		List<Employee> list = new ArrayList<Employee>();
+		list.add(new Employee(1, "Sam"));
+		list.add(new Employee(2, "Raj"));
+		
+		try(Scanner sc = new Scanner(System.in)) {
+			
+			System.out.println("Enter Id");
+	         int id =sc.nextInt();
+	         
+	         System.out.println("Enter Name");
+	         String name =sc.next();
+	         EmployeeId(id, name);
+			
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+
+
+ class Stack2{
+	int arr[];
+	int top;
+	int SIZE;
+	public Stack2( int size) {
+		SIZE = size;
+		this.arr = new int [SIZE];
+		this.top = SIZE-1;
+	}
+	
+	
+	
+	
+}
+ 
+public class Question4 {
+
+	
+}

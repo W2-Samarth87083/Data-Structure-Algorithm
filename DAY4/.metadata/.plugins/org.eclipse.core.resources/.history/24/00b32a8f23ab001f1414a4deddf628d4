@@ -1,0 +1,65 @@
+
+public class DoublyCircular {
+		static class Node{
+			private int data;
+			private Node next, prev;
+			public Node(int value) {
+				data = value;
+				next = prev = null;
+			}
+		}
+
+		private Node head;
+		private int size;
+		
+		public DoublyCircular() {
+			head = null;
+			size = 0;
+		}
+		
+		public boolean isEmpty() {
+			return head == null;
+		}
+		
+		public int size() {
+			return size;
+		}
+		
+		
+		
+		
+		
+		public void fDisplay() {
+			if(head == null)
+				return;
+			System.out.print("Forward List : ");
+			Node trav = head;
+			do {
+				//2. print current node
+				System.out.print(" " + trav.data);
+				trav = trav.next;
+			}while(trav != head);
+			System.out.println();
+		}
+		
+		public void rDisplay() {
+			//0. if list is empty
+			if(head == null)
+				return;
+			System.out.print("Backward List : ");
+			//1. create trav and start at last node
+			Node trav = head.prev;
+			do {
+				//2. print current node
+				System.out.print(" " + trav.data);
+				//3. go on prev node
+				trav = trav.prev;
+			}while(trav != head.prev);	// 4. repeat step 2 and 3 till first node node
+			System.out.println();
+		}
+		
+		public void deleteAll() {
+			head = null;
+			size = 0;
+		}
+}

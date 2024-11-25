@@ -1,0 +1,21 @@
+
+class Stack1{
+	int arr[];
+	int top;
+	int SIZE;
+	public Stack1(int size) {
+		SIZE = size;
+		this.arr = new int[SIZE];
+		top =-1;
+
+	}
+	
+	
+}
+
+public class Question3 {
+
+	public static void main(String [] args) {
+		
+	}
+}

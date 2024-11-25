@@ -1,0 +1,21 @@
+package com.sunbeam;
+
+public class DecimalToBinary {
+	
+	public static void DecimalToBinary(int n) {
+		while(n>0){
+			System.out.println(n%2);
+			n=n/2;
+			
+		}	
+	}
+
+
+public static void main(String [] args) {
+	
+	
+	DecimalToBinary(1);
+	
+}
+
+}

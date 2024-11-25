@@ -1,0 +1,36 @@
+
+public class LinkedList {
+	static class Node {
+		private int data;
+		private Node next;
+
+		public Node(int value) {
+			data = value;
+			next = null;
+		}
+	}
+
+	private Node head, tail;
+	private int size;
+
+	public LinkedList() {
+		head = tail = null;
+		size = 0;
+	}
+
+	public boolean isEmpty() {
+		return head == null && tail == null;
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public void addFirst(int value) {
+		
+		Node newnode= new Node(value);
+		
+		
+		
+	}
+}

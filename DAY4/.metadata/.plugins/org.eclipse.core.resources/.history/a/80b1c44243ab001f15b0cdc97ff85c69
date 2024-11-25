@@ -1,0 +1,106 @@
+
+public class SinglyCircular {
+
+	    static class Node {
+	        int data;
+	        Node next;
+
+	        Node(int data) {
+	            this.data = data;
+	            this.next = null;
+	        }
+	    }
+
+	    private Node tail; // Pointer to the last node
+	    private int size;  // To track the number of nodes
+
+	    public SinglyCircularLinkedList() {
+	        tail = null;
+	        size = 0;
+	    }
+
+	    // Check if the list is empty
+	    public boolean isEmpty() {
+	        return tail == null;
+	    }
+
+	    // Add a node at the beginning
+	    public void addFirst(int data) {
+	        Node newNode = new Node(data);
+
+	        if (isEmpty()) {
+	            tail = newNode;
+	            tail.next = tail; // Circular link
+	        } else {
+	            newNode.next = tail.next; // Point to the first node
+	            tail.next = newNode;      // Update tail's next to the new first node
+	        }
+	        size++;
+	    }
+
+	    // Add a node at the end
+	    public void addLast(int data) {
+	        Node newNode = new Node(data);
+
+	        if (isEmpty()) {
+	            tail = newNode;
+	            tail.next = tail; // Circular link
+	        } else {
+	            newNode.next = tail.next; // Point to the first node
+	            tail.next = newNode;      // Update old tail's next
+	            tail = newNode;           // Update tail to the new last node
+	        }
+	        size++;
+	    }
+
+	    // Delete the first node
+	    public void deleteFirst() {
+	        if (isEmpty()) {
+	            return;
+	        } else if (tail.next == tail) { // Single node case
+	            tail = null;
+	        } else {
+	            tail.next = tail.next.next; // Skip the first node
+	        }
+	        size--;
+	    }
+
+	    // Delete the last node
+	    public void deleteLast() {
+	        if (isEmpty()) {
+	            return;
+	        } else if (tail.next == tail) { // Single node case
+	            tail = null;
+	        } else {
+	            Node current = tail.next; // Start from the first node
+	            while (current.next != tail) {
+	                current = current.next; // Move to the second-to-last node
+	            }
+	            current.next = tail.next; // Update the second-to-last node's next to point to the first node
+	            tail = current;           // Update tail to the second-to-last node
+	        }
+	        size--;
+	    }
+
+	    // Display the list
+	    public void display() {
+	        if (isEmpty()) {
+	            System.out.println("List is empty.");
+	            return;
+	        }
+
+	        Node current = tail.next; // Start from the first node
+	        do {
+	            System.out.print(current.data + " -> ");
+	            current = current.next;
+	        } while (current != tail.next);
+	        System.out.println("(back to head)");
+	    }
+
+	    // Get the size of the list
+	    public int size() {
+	        return size;
+	    }
+	}
+
+

@@ -1,0 +1,7 @@
+
+public class DoublyCircularMain {
+
+	public static void main(String [] args) {
+		DoublyCircular l1 = new DoublyCircular();
+	}	
+}

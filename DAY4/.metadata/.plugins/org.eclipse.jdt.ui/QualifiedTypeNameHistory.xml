@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="LinkedList.Node"/>
+    <fullyQualifiedTypeName name="LinkedList"/>
+    <fullyQualifiedTypeName name="DoublyLinear.Node"/>
+    <fullyQualifiedTypeName name="DoublyCircular"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="SinglyCircular"/>
+    <fullyQualifiedTypeName name="SinglyCircular.Node"/>
+</qualifiedTypeNameHistroy>
